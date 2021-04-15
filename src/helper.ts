@@ -1,8 +1,8 @@
-import * as Monaco from "monaco-editor";
+type Monaco = any;
 
 declare global {
   interface Window {
-    monaco?: typeof Monaco;
+    monaco?: Monaco;
   }
 }
 
@@ -12,8 +12,8 @@ export const defaultOption = {
 };
 
 export function checkMonacoExists(
-  monaco?: typeof Monaco
-): monaco is typeof Monaco {
+  monaco?: Monaco
+): monaco is Monaco {
   if (!monaco)
     console.error(
       "emmet-monaco-es: 'monaco' should be either declared on window or passed as first parameter"
@@ -42,7 +42,7 @@ interface EmmetSet {
  * @param getLegalEmmetSets get legal emmet substring from a string.
  */
 export function onCompletion(
-  monaco: typeof Monaco,
+  monaco: Monaco,
   language: string | string[],
   isMarkup: boolean,
   isLegalToken: (tokens: Token[], index: number) => boolean,
@@ -53,7 +53,7 @@ export function onCompletion(
   const providers = language.map((lang) =>
     monaco.languages.registerCompletionItemProvider(lang, {
       triggerCharacters: ">+-^*()#.[]$@{}=!:%".split(""),
-      provideCompletionItems: (model, position) => {
+      provideCompletionItems: (model: any, position: any) => {
         const { column, lineNumber } = position;
 
         // there is nothing before caret, return

@@ -1,6 +1,6 @@
 {
-  "name": "emmet-monaco-es",
-  "version": "4.6.2",
+  "name": "@mate-academy/emmet-monaco",
+  "version": "1.0.0",
   "description": "emmet plugin for monaco-editor",
   "keywords": [
     "emmet",
@@ -12,14 +12,16 @@
   "typings": "index.d.ts",
   "scripts": {
     "watch": "rollup -c --watch",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "rm -rf ./dist && npm run build",
+    "postpublish": "rm -rf dist"
   },
   "sideEffects": false,
   "license": "MIT",
   "author": "Troy",
   "homepage": "https://github.com/troy351/emmet-monaco-es",
   "peerDependencies": {
-    "monaco-editor": "^0.22.0"
+    "@mate-academy/monaco-editor": "^0.2.7"
   },
   "dependencies": {
     "@emmetio/abbreviation": "^0.7.0",

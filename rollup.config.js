@@ -35,7 +35,7 @@ export default [
       json(),
       buble()
     ],
-    external: ["monaco-editor"]
+    external: ["@mate-academy/monaco-editor"]
   },
   {
     input: "src/index.ts",
@@ -67,6 +67,6 @@ export default [
       terser(),
       buble()
     ],
-    external: ["monaco-editor"]
+    external: ["@mate-academy/monaco-editor"]
   }
 ];
