@@ -27,7 +27,7 @@ export default [
       exclude: 'node_modules/**',
     },
     plugins: [commonjs(), resolve(), typescript()],
-    external: ['monaco-editor'],
+    external: ['@mate-academy/monaco-editor'],
   },
   {
     input: 'src/index.ts',
@@ -52,6 +52,6 @@ export default [
       exclude: 'node_modules/**',
     },
     plugins: [commonjs(), resolve(), typescript(), terser()],
-    external: ['monaco-editor'],
+    external: ['@mate-academy/monaco-editor'],
   },
 ]
