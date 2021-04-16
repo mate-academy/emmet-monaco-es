@@ -74,7 +74,6 @@ export function onCompletion(
         for (let i = 1; i <= lineNumber; i++) {
           tokenizationResult = tokenizationSupport.tokenize(
             model.getLineContent(i),
-            true,
             state,
             0
           );

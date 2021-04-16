@@ -14,7 +14,8 @@
     "watch": "rollup -c --watch",
     "build": "rollup -c",
     "prepublishOnly": "rm -rf ./dist && npm run build",
-    "postpublish": "rm -rf dist"
+    "postpublish": "rm -rf dist",
+    "patch": "npm version patch && npm publish"
   },
   "sideEffects": false,
   "license": "MIT",
