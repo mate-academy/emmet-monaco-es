@@ -1,6 +1,6 @@
 {
   "name": "@mate-academy/emmet-monaco",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "emmet plugin for monaco-editor",
   "keywords": [
     "emmet",
@@ -22,7 +22,7 @@
   "author": "Troy",
   "homepage": "https://github.com/troy351/emmet-monaco-es",
   "peerDependencies": {
-    "@mate-academy/monaco-editor": ">=0.2.7<0.4.0"
+    "@mate-academy/monaco-editor": "*"
   },
   "dependencies": {
     "@emmetio/abbreviation": "^0.7.0",
